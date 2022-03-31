@@ -14,6 +14,8 @@
     --bgBox: linear-gradient(90deg, rgba(31,38,48,1) 41%, rgba(25,32,42,1) 100%);
 }
 
+.hide{display: none;}
+
 *{
     font-family: 'Overpass', sans-serif;
     margin: 0;
@@ -34,22 +36,23 @@ body{
     align-items: center;
     height: 100vh;
 }
-
 .containerBox{
     background: var(--bgBox);
     color: var(--White);
     border-radius: 20px;
     width: 430px;
+    height: 380px;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-h2{
+.titre{
     font-weight: var(--Weights700);
 }
-p{
+
+.paragraph{
     font-weight: var(--Weights400);
     color: var(--LightGrey);
     width: 380px;
@@ -84,6 +87,8 @@ ul{
     border-radius: 100%;
     width: 55px;
     height: 55px;
+
+    transition: background, color .5s;
 }
 
 .review:hover{
@@ -125,4 +130,48 @@ button[type='submit']{
 button[type='submit']:hover{
     background-color: var(--White);
     color: var(--orange);
+}
+
+.thanks{
+    text-align: center;
+}
+.thanks h2{
+    margin-top: 30px;
+}
+
+.thanks .paragraph{
+    width: 300px;
+    font-weight: 700;
+}
+
+.thanksStyle2{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.thanksStyle{
+    color: var(--orange);
+    background-color: #262F38;
+    border-radius: 20px;
+    width: 180px;
+    padding: 5px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 375px) {
+    .containerBox{
+        width: 350px;
+    }
+
+    .box{
+        width: 300px;
+    }
+
+    .review{
+        width: 40px;
+        height: 40px;
+    }
+    
 }
